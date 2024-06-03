@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+
+    printf("Introduce un número: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        sum += i * i;
+    }
+
+    printf("La suma de los cuadrados de los primeros %d números es: %d\n", n, sum);
+    return 0;
+}
