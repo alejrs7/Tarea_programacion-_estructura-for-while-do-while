@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int productoGeometricoDoWhile(int base, int n) {
+    int producto = 1, i = 0;
+    do {
+        producto *= base;
+        i++;
+    } while (i < n);
+    return producto;
+}
+
+int main() {
+    int base = 2, n = 4;
+    printf("Producto de la serie geométrica: %d\n", productoGeometricoDoWhile(base, n));
+    return 0;
+}
