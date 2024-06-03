@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int num, contador = 0;
+
+    printf("Introduce un número: ");
+    scanf("%d", &num);
+
+    while (num > 0) {
+        num -= 3 * 3 * 3;
+        if (num >= 0) contador++;
+    }
+
+    printf("La raíz cúbica aproximada es: %d\n", contador);
+    return 0;
+}
