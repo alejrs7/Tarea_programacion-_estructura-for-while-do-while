@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int raizCubicaFor(int num) {
+    int raiz = 0;
+    for (int i = 0; num > 0; i++) {
+        num -= (3 * raiz * raiz + 3 * raiz + 1);
+        if (num >= 0) {
+            raiz++;
+        }
+    }
+    return raiz;
+}
+
+int main() {
+    int numero = 27;
+    printf("Raíz cúbica: %d\n", raizCubicaFor(numero));
+    return 0;
+}
