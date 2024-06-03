@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int sumaCuadradosWhile(int n) {
+    int suma = 0, i = 1;
+    while (i <= n) {
+        suma += i * i;
+        i++;
+    }
+    return suma;
+}
+
+int main() {
+    int n = 3;
+    printf("Suma de los cuadrados: %d\n", sumaCuadradosWhile(n));
+    return 0;
+}
