@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+unsigned long long factorial(int num) {
+    unsigned long long fact = 1;
+    for (int i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+int main() {
+    int n;
+    unsigned long long sum = 0;
+
+    printf("Introduce un número: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        sum += factorial(i);
+    }
+
+    printf("La suma de los factoriales de los primeros %d números es: %llu\n", n, sum);
+    return 0;
+}
