@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num, reverse = 0, digit;
+
+    printf("Introduce un número: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        digit = num % 10; // Extraer el último dígito
+        reverse = reverse * 10 + digit; // Construir el número inverso
+        num /= 10; // Eliminar el último dígito
+    }
+
+    printf("El inverso del número es: %d\n", reverse);
+    return 0;
+}
