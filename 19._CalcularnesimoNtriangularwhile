@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int numeroTriangularWhile(int n) {
+    int suma = 0, i = 1;
+    while (i <= n) {
+        suma += i;
+        i++;
+    }
+    return suma;
+}
+
+int main() {
+    int n = 4;
+    printf("El %d-ésimo número triangular es: %d\n", n, numeroTriangularWhile(n));
+    return 0;
+}
