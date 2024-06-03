@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int factorial(int num) {
+    int resultado = 1, i = 1;
+    do {
+        resultado *= i;
+        i++;
+    } while (i <= num);
+    return resultado;
+}
+
+int sumaFactorialesDoWhile(int n) {
+    int suma = 0, i = 1;
+    do {
+        suma += factorial(i);
+        i++;
+    } while (i <= n);
+    return suma;
+}
+
+int main() {
+    int n = 3;
+    printf("La suma de los factoriales de los primeros %d números es: %d\n", n, sumaFactorialesDoWhile(n));
+    return 0;
+}
