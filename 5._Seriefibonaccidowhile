@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void fibonacciDoWhile(int n) {
+    int a = 0, b = 1, siguiente, i = 0;
+    do {
+        if (i <= 1) {
+            siguiente = i;
+        } else {
+            siguiente = a + b;
+            a = b;
+            b = siguiente;
+        }
+        printf("%d ", siguiente);
+        i++;
+    } while (i < n);
+    printf("\n");
+}
+
+int main() {
+    int n = 10;
+    printf("Serie de Fibonacci: ");
+    fibonacciDoWhile(n);
+    return 0;
+}
