@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int sumaDigitosDoWhile(int num) {
+    int suma = 0;
+    do {
+        suma += num % 10;
+        num /= 10;
+    } while (num > 0);
+    return suma;
+}
+
+int main() {
+    int numero = 12567;
+    printf("Suma de los dígitos: %d\n", sumaDigitosDoWhile(numero));
+    return 0;
+}
