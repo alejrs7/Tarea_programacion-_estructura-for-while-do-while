@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int sumaDigitosFor(int num) {
+    int suma = 0;
+    for (; num > 0; num /= 10) {
+        suma += num % 10;
+    }
+    return suma;
+}
+
+int main() {
+    int numero = 12567;
+    printf("Suma de los dígitos: %d\n", sumaDigitosFor(numero));
+    return 0;
+}
