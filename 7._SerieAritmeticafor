@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+
+    printf("Introduce el número de términos: ");
+    scanf("%d", &n);
+
+    sum = n * (n + 1) / 2;
+
+    printf("La suma de los primeros %d términos es: %d\n", n, sum);
+    return 0;
+}
