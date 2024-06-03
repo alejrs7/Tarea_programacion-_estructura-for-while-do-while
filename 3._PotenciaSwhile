@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int potenciaWhile(int base, int exponente) {
+    int resultado = 1, i = 0;
+    while (i < exponente) {
+        int suma = 0, j = 0;
+        while (j < base) {
+            suma += resultado;
+            j++;
+        }
+        resultado = suma;
+        i++;
+    }
+    return resultado;
+}
+
+int main() {
+    int base = 2, exponente = 3;
+    printf("Potencia: %d\n", potenciaWhile(base, exponente));
+    return 0;
+}
