@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int sumaDigitosDoWhile(int num) {
+    int suma = 0;
+
+    // Usamos do-while para asegurarnos de que se ejecute al menos una vez
+    do {
+        suma += num % 10; // Sumamos el último dígito
+        num /= 10;        // Eliminamos el último dígito
+    } while (num > 0);
+
+    return suma;
+}
+
+int main() {
+    int num;
+
+    printf("Introduce un número: ");
+    scanf("%d", &num);
+
+    printf("La suma de los dígitos es: %d\n", sumaDigitosDoWhile(num));
+    return 0;
+}
