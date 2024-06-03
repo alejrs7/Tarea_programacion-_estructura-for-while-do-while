@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int multiplicar(int a, int b) {
+    int result = 0;
+    for (int i = 0; i < b; i++) {
+        result += a;
+    }
+    return result;
+}
+
+int main() {
+    int base, exponente, result;
+
+    printf("Introduce la base y el exponente: ");
+    scanf("%d %d", &base, &exponente);
+
+    result = base;
+    for (int i = 1; i < exponente; i++) {
+        result = multiplicar(result, base);
+    }
+
+    printf("%d^%d = %d\n", base, exponente, result);
+    return 0;
+}
