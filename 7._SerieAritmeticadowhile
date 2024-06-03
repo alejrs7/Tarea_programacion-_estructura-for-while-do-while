@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+
+    printf("Introduce dos números: ");
+    scanf("%d %d", &a, &b);
+
+    // Convertimos el while a un do-while
+    do {
+        temp = b;
+        b = a % b;
+        a = temp;
+    } while (b != 0);
+
+    printf("El MCD es: %d\n", a);
+    return 0;
+}
