@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int numeroTriangularFor(int n) {
+    int suma = 0;
+    for (int i = 1; i <= n; i++) {
+        suma += i;
+    }
+    return suma;
+}
+
+int main() {
+    int n = 4;
+    printf("El %d-ésimo número triangular es: %d\n", n, numeroTriangularFor(n));
+    return 0;
+}
