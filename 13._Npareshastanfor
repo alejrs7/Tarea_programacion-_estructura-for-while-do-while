@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+
+    printf("Introduce un número: ");
+    scanf("%d", &n);
+
+    for (int i = 2; i <= n; i += 2) {
+        sum += i;
+    }
+
+    printf("La suma de los números pares hasta %d es: %d\n", n, sum);
+    return 0;
+}
