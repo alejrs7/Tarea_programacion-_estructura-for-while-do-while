@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+double sumaFraccionariosWhile(int n) {
+    double suma = 0.0;
+    int i = 1;
+    while (i <= n) {
+        suma += 1.0 / i;
+        i++;
+    }
+    return suma;
+}
+
+int main() {
+    int n = 3;
+    printf("Suma de la serie fraccionaria: %.2f\n", sumaFraccionariosWhile(n));
+    return 0;
+}
