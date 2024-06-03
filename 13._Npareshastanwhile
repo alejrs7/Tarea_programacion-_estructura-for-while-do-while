@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int sumaParesWhile(int n) {
+    int suma = 0, i = 2;
+    while (i <= n) {
+        suma += i;
+        i += 2;
+    }
+    return suma;
+}
+
+int main() {
+    int n = 10;
+    printf("Suma de los pares: %d\n", sumaParesWhile(n));
+    return 0;
+}
