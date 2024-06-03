@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int sumaDigitosFor(int num) {
+    int suma = 0;
+
+    // Usamos for para iterar mientras el número sea mayor que 0
+    for (; num > 0; num /= 10) {
+        suma += num % 10; // Sumamos el último dígito
+    }
+
+    return suma;
+}
+
+int main() {
+    int num;
+
+    printf("Introduce un número: ");
+    scanf("%d", &num);
+
+    printf("La suma de los dígitos es: %d\n", sumaDigitosFor(num));
+    return 0;
+}
