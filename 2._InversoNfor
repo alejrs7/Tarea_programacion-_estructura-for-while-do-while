@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int inversoNumeroFor(int num) {
+    int inverso = 0;
+    for (; num > 0; num /= 10) {
+        inverso = inverso * 10 + num % 10;
+    }
+    return inverso;
+}
+
+int main() {
+    int numero = 12567;
+    printf("Inverso del número: %d\n", inversoNumeroFor(numero));
+    return 0;
+}
