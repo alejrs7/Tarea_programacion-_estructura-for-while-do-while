@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    double product = 1.0;
+
+    printf("Introduce un número: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        product *= 1.0 / i;
+    }
+
+    printf("El producto de la serie es: %.2f\n", product);
+    return 0;
+}
