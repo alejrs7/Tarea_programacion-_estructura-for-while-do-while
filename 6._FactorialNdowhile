@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int factorialDoWhile(int num) {
+    int resultado = 1, i = 1;
+    do {
+        resultado *= i;
+        i++;
+    } while (i <= num);
+    return resultado;
+}
+
+int main() {
+    int numero = 5;
+    printf("Factorial: %d\n", factorialDoWhile(numero));
+    return 0;
+}
