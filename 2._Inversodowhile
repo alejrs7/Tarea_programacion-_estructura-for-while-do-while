@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int inversoNumeroDoWhile(int num) {
+    int inverso = 0;
+    do {
+        inverso = inverso * 10 + num % 10;
+        num /= 10;
+    } while (num > 0);
+    return inverso;
+}
+
+int main() {
+    int numero = 12567;
+    printf("Inverso del número: %d\n", inversoNumeroDoWhile(numero));
+    return 0;
+}
