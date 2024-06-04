@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+// Función para verificar si un número es primo
+bool esPrimo(int numero) {
+    if (numero <= 1) return false;
+    if (numero == 2) return true;
+    if (numero % 2 == 0) return false;
+    
+    for (int i = 3; i * i <= numero; i += 2) {
+        if (numero % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int numero;
+    char opcion;
+
+    do {
+        printf("Ingrese un número: ");
+        scanf("%d", &numero);
+
+        if (esPrimo(numero)) {
+            printf("El número %d es primo.\n", numero);
+        } else {
+            printf("El número %d no es primo.\n", numero);
+        }
+
+        printf("¿Desea verificar otro número? (s/n): ");
+        scanf(" %c", &opcion); // Espacio antes de %c para consumir el newline
+
+    } while (opcion == 's' || opcion == 'S');
+
+    return 0;
+}
+
+}
