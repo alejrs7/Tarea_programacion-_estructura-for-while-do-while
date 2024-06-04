@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n, i = 1;
+    int suma = 0;
+
+    // Solicitar al usuario el valor de n
+    printf("Introduce un número entero positivo: ");
+    scanf("%d", &n);
+
+    // Sumar los cuadrados de los números desde 1 hasta n
+    do {
+        suma += i * i;
+        i++;
+    } while (i <= n);
+
+    // Mostrar el resultado
+    printf("La suma de los cuadrados desde 1 hasta %d es: %d\n", n, suma);
+
+    return 0;
+}
